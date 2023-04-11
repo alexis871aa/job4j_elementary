@@ -15,5 +15,17 @@ public class Calculator {
         System.out.println(sixDivTwo);
         System.out.println(fiveMinusTwo);
         System.out.println(fourTimeTwo);
+        System.out.println("Расчёты из книги:");
+        int a = 1;
+        int b = 2;
+        int c = 3;
+        a += 5;
+        b *= 4;
+        c += a * b;
+        System.out.println("c = " + c);
+        c %= 6;
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+        System.out.println("c = " + c);
     }
 }
