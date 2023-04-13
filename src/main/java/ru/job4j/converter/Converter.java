@@ -12,15 +12,6 @@ public class Converter {
     }
 
     public static void main(String[] args) {
-        float in = 140;
-        float expectedEuro = 2;
-        float outEuro = Converter.rubleToEuro(in);
-        boolean passed = expectedEuro == outEuro;
-        System.out.println("140 rubles are 2 euro. Test result : " + passed);
-
-        float expectedDollar = 2.3333333f;
-        float outDollar = Converter.rubleToDollar(in);
-        passed = expectedDollar == outDollar;
-        System.out.println("140 rubles are 2.3333333 dollar. Test result : " + passed);
+        System.out.println("Пишем тесты для конвертации 140 рублей в евро и 180 рублей в доллары!");
     }
 }
