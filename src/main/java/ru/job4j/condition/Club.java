@@ -13,6 +13,5 @@ public class Club {
         permission(true, true);
         permission(true, false);
         permission(false, true);
-        permission(false, false);
     }
 }
