@@ -22,7 +22,11 @@ public class Echo {
                 if (num1 % 2 == 0) {
                     num1++;
                 } else {
-                    num1--;
+                    if (num1 < 0) {
+                        num1++;
+                    } else {
+                        num1--;
+                    }
                 }
                 if (num2 % 2 == 0) {
                     num2++;
@@ -39,33 +43,45 @@ public class Echo {
                     num1--;
                 } else {
                     if (num1 != 9) {
-                        num1++;
+                        if (num1 < 0) {
+                            num1--;
+                        } else {
+                            num1++;
+                        }
                     }
                 }
-                if (num2 % 2 == 0 && num2 > 0) {
-                    num2--;
+                if (num2 % 2 == 0) {
+                    if (num2 > 0) {
+                        num2--;
+                    }
                 } else {
                     if (num2 != 9) {
                         num2++;
                     }
                 }
-                if (num3 % 2 == 0 && num3 > 0) {
-                    num3--;
+                if (num3 % 2 == 0) {
+                    if (num3 > 0) {
+                        num3--;
+                    }
                 } else {
                     if (num3 != 9) {
                         num3++;
                     }
                 }
             }
-            System.out.println(num1 * 100 + num2 * 10 + num3);
+            if (num1 != 0) {
+                System.out.format("%d%d%d\n", num1, num2, num3);
+            } else {
+                System.out.println(num2 * 10 + num3);
+            }
     }
 
     public static void main(String[] args) {
-        //transform(390);     // 281
-        //transform(333);     // 444
-        transform(-900);    // -811 -989
-        //transform(999);     // 999
-        //transform(-109);    // -209 19
-        //transform(100);     // 11
+        transform(390);     // 281
+        transform(333);     // 444
+        transform(-900);    // -811
+        transform(999);     // 999
+        transform(-109);    // -209
+        transform(100);     // 11
     }
 }
